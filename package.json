@@ -1,0 +1,29 @@
+{
+  "name": "birthday-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.8.1",
+    "helmet": "^3.23.3",
+    "next": "^9.5.0",
+    "next-images": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/airtable": "^0.8.0",
+    "@types/next": "^9.0.0",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.43",
+    "@types/styled-components": "^5.1.1",
+    "typescript": "^3.9.7"
+  }
+}
