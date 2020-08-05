@@ -13,11 +13,13 @@ const noteStyle= theme('mode', {
         width: 25vw;
         marign-left: 10vw;
         border-color: ${palette.colors.primary};
+        margin: auto;
     `,
 
     right:css`
         width: 25vw;
         margin-left: 55vw;
         border-color: ${palette.colors.contrast};
+        margin: auto;
     `
 }) 
