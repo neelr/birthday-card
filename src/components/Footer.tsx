@@ -3,11 +3,17 @@ import React from 'react'
 import palette from '../theme/palette'
 
 const StyledBar = styled.div`
-    border-top-color: ${palette.colors.dark};
+    bottom: 0;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 4vw;
+    text-align: center;
+    color: ${palette.colors.gray};
 `
 const Tag = styled.h4`
     font-family: roboto;
-    font-size: 1.5vw;
+    font-size: 0.5vw;
     color: ${palette.colors.dark};
 `
 
