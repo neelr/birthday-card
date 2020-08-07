@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import React from 'react'
 import palette from '../theme/palette'
 
 const StyledBar = styled.div`

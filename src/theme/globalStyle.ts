@@ -4,11 +4,11 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html{
-        font-family: roboto;
-        background: linear-gradient(45deg,rgba(137,255,255,0.5),rgba(161,252,143, 0.25), rgba(255,167,137, 1));
+        font-family: sans-serif;
+        background: linear-gradient(45deg,rgba(137,255,255,0.75),rgba(161,252,143, 0.25), rgba(255,167,137, 1));
         background-size: 400% 400%;
-        -webkit-animation: gradientBG 10s ease infinite;
-        animation: gradientBG 10s ease infinite;
+        -webkit-animation: gradientBG 20s ease infinite;
+        animation: gradientBG 20s ease infinite;
         height: 100vw;
         overflow: hidden;
     }

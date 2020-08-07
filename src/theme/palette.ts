@@ -2,6 +2,7 @@ const palette = {
     colors: {
         gray: '#383838',
         dark: '#1e1e1e',
+        light: '#f7f7f7',
         primary: '#89c4fff',
         contrast: '#ffa789',
         mid:'a1fc8f',
@@ -10,10 +11,6 @@ const palette = {
     },
     fonts: {
         cursive: "'Great Vibes' cursive",
-    },
-    //I was too lazy to make a seperate thing
-    misc: {
-        name: "Kai"
     }
 }
 
