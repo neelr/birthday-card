@@ -3,12 +3,15 @@ import palette from '../theme/palette'
 
 
 export const Signature = styled.h3`
-    font-size: 1.5vw;
-    font-family: ${palette.fonts.cursive};
-    color: ${palette.colors.dark};
+  padding-left: 3vw;
+  margin:0 auto;
+  font-size: 1vw;
+  font-family: 'Mr Dafoe', cursive;
+  color: ${palette.colors.dark};
 `
 
 export const Body = styled.div`
-  margin: auto;
+  padding-top: 3vw;
+  margin:0 auto;
   width: 80%;
 `

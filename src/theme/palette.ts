@@ -8,9 +8,6 @@ const palette = {
         mid:'a1fc8f',
         background: '#89ffff',
         background_contrast: '#ffa789'
-    },
-    fonts: {
-        cursive: "'Great Vibes' cursive",
     }
 }
 

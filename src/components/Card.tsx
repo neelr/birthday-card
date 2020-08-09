@@ -11,11 +11,11 @@ const Card = styled.div`
   background-size: 2px 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 60vw;
-  height: 60vh;
+  width: 70vw;
+  height: 65vh;
   margin: 0 auto;
-
   transition: all 0.5s ease-out;
+
   &:hover{
     box-shadow: 1vw 2vh ${palette.colors.gray};
     transform: scale(1.1);
