@@ -9,16 +9,13 @@ function Index() {
     return(
         <Layout title={`🎂 Happy birthday ${config.name}!`}>
             <br/>
-            <Header>`🎉Happy Birthday {config.name}!!!🎉`</Header>
+            <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
+            <a href = '/sign'>Sign</a>
             <br/>
             <br/>
             <br/>
             <Card>
                 <LeftPage>
-                    <Body>
-                    This is is test note yay yay yay yay yay yay yay yay yay yay
-                    </Body>
-                    <Signature>Not Evan Nishi</Signature>
                 </LeftPage>
                 <RightPage>
                 </RightPage>
