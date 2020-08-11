@@ -10,8 +10,16 @@ export const Signature = styled.h3`
   color: ${palette.colors.dark};
 `
 
-export const Body = styled.div`
-  padding-top: 3vw;
+const BodyWrapper = styled.div`
   margin:0 auto;
   width: 80%;
+  max-width: 80%;
 `
+
+export function Body(props){
+  return(
+    <BodyWrapper>
+      <p>{props.children}</p>
+    </BodyWrapper>
+  )
+}
