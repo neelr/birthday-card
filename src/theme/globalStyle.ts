@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
         height: 100vw;
         overflow: hidden;
     }
+    canvas{
+        position: absolute;
+    }
 
     @-webkit-keyframes gradientBG {
 	    0% {

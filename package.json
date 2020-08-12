@@ -12,6 +12,7 @@
   "dependencies": {
     "airtable": "^0.8.1",
     "babel-plugin-styled-components": "^1.11.1",
+    "confetti-js": "0.0.18",
     "framer-motion": "^2.3.0",
     "helmet": "^3.23.3",
     "next": "^9.5.0",

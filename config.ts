@@ -1,6 +1,4 @@
-import { start } from "repl"
-
-let startDate = new Date(2020, 7, 14, 1)
+let startDate = new Date(2020, 6, 20, 0)
 
 const config = {
     name: "Kai",

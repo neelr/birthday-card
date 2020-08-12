@@ -3,8 +3,19 @@ import React, { useEffect, useState } from 'react'
 import config from '../../config'
 
 export const CountWrapper = styled.div`
-    background: black;
-    border-radius: 5px;
+    padding-top: 1vh;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    background: white;
+    margin:0 auto;
+    width: 45vw;
+    height: 10vh;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
 `
 //used https://github.com/do-community/react-hooks-timer/blob/master/src/App.js
 export default function Timer(){
@@ -46,6 +57,7 @@ export default function Timer(){
     return(
         <CountWrapper>
             {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+            <p>Until {config.name}'s birthday! </p>
         </CountWrapper>
     )
 }
