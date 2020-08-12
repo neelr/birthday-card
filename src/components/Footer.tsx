@@ -11,8 +11,7 @@ const StyledBar = styled.div`
     color: ${palette.colors.gray};
 `
 const Tag = styled.h4`
-    font-family: roboto;
-    font-size: 0.5vw;
+    font-size: 0.65vw;
     color: ${palette.colors.dark};
 `
 

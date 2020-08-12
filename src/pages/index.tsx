@@ -3,10 +3,11 @@ import Card from '../components/Card'
 import Header from '../components/Header'
 import Timer from '../components/Countdown'
 import { Signature, Body } from '../components/Note';
-import { LeftPage, RightPage } from '../components/Page'
+import Page from '../components/Page'
 import config from '../../config'
 import React from 'react'
 import ConfettiGenerator from 'confetti-js'
+import Switch from '../components/Switch'
 
 function Index() {
     if(Date.now() < config.activationDate.getTime()){
@@ -17,7 +18,7 @@ function Index() {
                 <br/>
                 <br/>
                 <br/>
-                <Timer/>
+                <Timer>Until {config.name}'s birthday</Timer>
             </Layout>
         )
     }
@@ -26,26 +27,24 @@ function Index() {
         const confettiSettings = { target: 'confetti-card', respawn: true, start_from_edge: true, max: 100}
         const confetti = new ConfettiGenerator(confettiSettings)
         confetti.render();
-
         return () => confetti.clear();
         }, [])
         return(
-            <Layout title={`🎂 Happy birthday ${config.name}!`}>
+            <div style={{ overflow: 'hidden' }}>
                 <canvas id="confetti-card"/>
-                <br/>
-                <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
-                <a href = '/sign'>Sign</a>
-                <br/>
-                <br/>
-                <br/>
-                <Card>
-                    <LeftPage>
-                    </LeftPage>
-                    <RightPage>
-                    </RightPage>
-                </Card>
-                <br/>
-            </Layout>
+                <Layout title={`🎂 Happy birthday ${config.name}!`}>
+                    <br/>
+                    <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <Card>
+                        <Page side="left"></Page>
+                        <Page side="right"></Page>
+                    </Card>
+                    <br/>
+                </Layout>
+            </div>
         )
     }
 }

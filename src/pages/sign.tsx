@@ -3,6 +3,7 @@ import config from '../../config'
 import Header from '../components/Header'
 import Timer from '../components/Countdown'
 import Button from '../components/Button'
+
 function Sign(){
     return(
         <Layout title={`Sign ${config.name}'s birthday card!`}>

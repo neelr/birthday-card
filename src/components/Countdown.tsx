@@ -6,7 +6,7 @@ export const CountWrapper = styled.div`
     padding-top: 1vh;
     vertical-align: middle;
     text-align: center;
-    font-size: 120%;
+    font-size: 160%;
     font-weight: bold;
     background: white;
     margin:0 auto;
@@ -18,7 +18,7 @@ export const CountWrapper = styled.div`
     border-radius: 10px;
 `
 //used https://github.com/do-community/react-hooks-timer/blob/master/src/App.js
-export default function Timer(){
+export default function Timer(props){
     const calcTimeLeft = () => {
         let year = new Date().getFullYear();
         const diff = +config.activationDate - +new Date()
@@ -56,8 +56,8 @@ export default function Timer(){
 
     return(
         <CountWrapper>
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-            <p>Until {config.name}'s birthday! </p>
+            {timerComponents.length ? timerComponents : <span>It's {config.name}'s birthday!</span>}
+            <p>{props.children}</p>
         </CountWrapper>
     )
 }
