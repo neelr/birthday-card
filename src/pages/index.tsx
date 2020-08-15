@@ -2,12 +2,12 @@ import Layout from '../components/Layout'
 import Card from '../components/Card'
 import Header from '../components/Header'
 import Timer from '../components/Countdown'
-import { Signature, Body } from '../components/Note';
+import { Signature, Body } from '../components/Note'
 import Page from '../components/Page'
 import config from '../../config'
 import React from 'react'
 import ConfettiGenerator from 'confetti-js'
-import Switch from '../components/Switch'
+import Button from '../components/Button'
 
 function Index() {
     if(Date.now() < config.activationDate.getTime()){
@@ -23,28 +23,35 @@ function Index() {
         )
     }
     else{
+        const [confettiOn, setConfetti] = React.useState<boolean>(false)
         React.useEffect(() => {
-        const confettiSettings = { target: 'confetti-card', respawn: true, start_from_edge: true, max: 100}
-        const confetti = new ConfettiGenerator(confettiSettings)
-        confetti.render();
-        return () => confetti.clear();
-        }, [])
+            const confettiSettings = { target: 'confetti-card', respawn: true, start_from_edge: true, max: 100}
+            const confetti = new ConfettiGenerator(confettiSettings)
+            
+            if(!confettiOn){
+                confetti.clear()
+            } else {
+                confetti.render()
+            }
+            return () => confetti.clear()
+        })
         return(
-            <div style={{ overflow: 'hidden' }}>
+            <Layout style={{ overflow: 'hidden' }} title={`🎂 Happy birthday ${config.name}!`}>
                 <canvas id="confetti-card"/>
-                <Layout title={`🎂 Happy birthday ${config.name}!`}>
-                    <br/>
-                    <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Card>
-                        <Page side="left"></Page>
-                        <Page side="right"></Page>
-                    </Card>
-                    <br/>
-                </Layout>
-            </div>
+                <br/>
+                <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Card>
+                    <Page side="left">
+                    <Button onClick={() => setConfetti(!confettiOn)}>{confettiOn ? "on":"off"}</Button>
+                    </Page>
+                    <Page side="right"></Page>
+                </Card>
+                <br/>
+            </Layout>
         )
     }
 }
