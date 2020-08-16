@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
         -webkit-animation: gradientBG 20s ease infinite;
         animation: gradientBG 20s ease infinite;
         height: 100vw;
-        overflow-x: hidden;
     }
     canvas{
         z-index: 5;

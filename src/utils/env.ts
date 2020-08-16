@@ -3,5 +3,4 @@ import { config } from 'dotenv'
 
 config({ path: resolve(__dirname, '../../.env') })
 
-export const BASE_ID = process.env.BASE_ID
-export const API_KEY = process.env.API_KEY
+export const MONGO_URL = process.env.MONGO_URL
