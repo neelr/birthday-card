@@ -5,7 +5,7 @@ import Timer from '../components/Countdown'
 import { Signature, Body } from '../components/Note'
 import { FlipWrapper, Front, Back } from '../components/Page'
 import config from '../../config'
-import React from 'react'
+import { useState, useEffect } from 'react'
 import ConfettiGenerator from 'confetti-js'
 import Button from '../components/Button'
 
@@ -23,8 +23,8 @@ function Index() {
         )
     }
     else{
-        const [confettiOn, setConfetti] = React.useState<boolean>(true)
-        React.useEffect(() => {
+        const [confettiOn, setConfetti] = useState<boolean>(true)
+        useEffect(() => {
             const confettiSettings = { target: 'confetti-card', respawn: true, start_from_edge: true, max: 100}
             const confetti = new ConfettiGenerator(confettiSettings)
             
@@ -46,14 +46,6 @@ function Index() {
                     <Button onClick={() => setConfetti(!confettiOn)}>{confettiOn ? "on":"off"}</Button>
                 </div>
                 <Card>
-                    <FlipWrapper>
-                        <Front>
-                            <p>Hai</p>
-                        </Front>
-                        <Back>
-                            <p>Hai</p>
-                        </Back>
-                    </FlipWrapper>
                     <FlipWrapper>
                         <Front>
                             <p>Hai</p>

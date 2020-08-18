@@ -4,7 +4,7 @@ import palette from '../theme/palette'
 const StyledBar = styled.div`
     bottom: 0;
     position: fixed;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.5);
     width: 100vw;
     height: 4vw;
     text-align: center;
@@ -15,9 +15,10 @@ const Tag = styled.h4`
     color: ${palette.colors.dark};
 `
 
-function Footer(){
+function Footer(props){
     return(
         <StyledBar>
+        {props.children}
             <Tag>Made with ♥ and 🍵 by Evan Nishi</Tag>
             <Tag>©2020 Evan Nishi</Tag>
         </StyledBar>

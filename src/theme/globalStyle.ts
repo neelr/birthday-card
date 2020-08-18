@@ -10,6 +10,15 @@ const GlobalStyle = createGlobalStyle`
         -webkit-animation: gradientBG 20s ease infinite;
         animation: gradientBG 20s ease infinite;
         height: 100vw;
+        overflow-x: hidden;
+    }
+
+    .flipped{
+        transform: rotateY(180deg);
+    }
+
+    .centered{
+        margin-left: 50vw;
     }
     canvas{
         z-index: 5;
