@@ -54,6 +54,22 @@ function Index() {
                             <p>Hai</p>
                         </Back>
                     </FlipWrapper>
+                    <FlipWrapper>
+                        <Front>
+                            <p>Hai1</p>
+                        </Front>
+                        <Back>
+                            <p>Hai1</p>
+                        </Back>
+                    </FlipWrapper>
+                    <FlipWrapper>
+                        <Front>
+                            <p>Hai2</p>
+                        </Front>
+                        <Back>
+                            <p>Hai2</p>
+                        </Back>
+                    </FlipWrapper>
                 </Card>
                 <br/>
             </Layout>

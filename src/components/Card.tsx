@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import palette from '../theme/palette';
 
 const Card = styled.div`
-  display:flex;
   perspective: 100vw;
   perspective-origin: center top;
   padding: 0;
   width: 30vw;
   height: 65vh;
-  margin: 0 auto;
+  margin-top: 0 auto;
+  margin-left: 50vw;
   transition: all 0.5s ease-out;
   &:hover{
     transform: scale(1.1);
