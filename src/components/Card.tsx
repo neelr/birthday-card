@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { useState, useEffect } from 'react'
 
-const Card = styled.div`
+const Wrapper = styled.div`
   perspective: 100vw;
   perspective-origin: center top;
   padding: 0;
@@ -15,6 +16,16 @@ const Card = styled.div`
   }
 `
 
+function Card(){
+  const [pageNum, setPage] = useState<number>(0);
+  return(
+    <Wrapper>
+    </Wrapper>
+  )
+}
+
+const BodyCard = styled.div`
+`
 export default Card
 
 /*
