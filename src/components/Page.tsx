@@ -26,7 +26,7 @@ export function FlipWrapper(props){
     deg = (isFlipped) ? 180:0
   })
   return(
-    <Wrapper onClick={() => {setFlipped(!isFlipped)}} flipped={isFlipped} z-index={props.zindex}>
+    <Wrapper onClick={() => {setFlipped(!isFlipped)}} flipped={isFlipped}>
       {props.children}
     </Wrapper>
   )

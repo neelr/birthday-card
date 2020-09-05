@@ -12,6 +12,7 @@ import Button from '../components/Button'
 function Index() {
     return(
         <Layout title="Birthday Card Creator">
+        <Header></Header>
             <Card></Card>
         </Layout>
     )

@@ -7,6 +7,7 @@ import config from '../../config'
 import { useState, useEffect } from 'react'
 import ConfettiGenerator from 'confetti-js'
 import Button from '../components/Button'
+import Head from 'next/head'
 
 function Page(){
     if(Date.now() < config.activationDate.getTime()){
@@ -35,7 +36,10 @@ function Page(){
             return () => confetti.clear()
         })
         return(
-            <Layout title={`🎂 Happy birthday ${config.name}!`}>
+            <div>
+                <Head>
+                    <title>🎉Happy Birthday {config.name}!!!🎉</title>
+                </Head>
                 <canvas id="confetti-card"/>
                 <br/>
                 <Header>🎉Happy Birthday {config.name}!!!🎉</Header>
@@ -71,7 +75,7 @@ function Page(){
                     </FlipWrapper>
                 </Card>
                 <br/>
-            </Layout>
+            </div>
         )
     }
 }

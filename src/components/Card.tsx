@@ -16,10 +16,11 @@ const Wrapper = styled.div`
   }
 `
 
-function Card(){
+function Card(props){
   const [pageNum, setPage] = useState<number>(0);
   return(
     <Wrapper>
+      {props.children}
     </Wrapper>
   )
 }
@@ -27,12 +28,3 @@ function Card(){
 const BodyCard = styled.div`
 `
 export default Card
-
-/*
-  transition: all 0.5s ease-out;
-  &:hover{
-    box-shadow: 1vw 2vh ${palette.colors.gray};
-    transform: scale(1.1);
-    transition: all 0.5s ease-out;
-  }
-*/
