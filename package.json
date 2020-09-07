@@ -2,7 +2,7 @@
   "name": "birthday-card",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "next"
   },
@@ -14,7 +14,7 @@
     "confetti-js": "0.0.18",
     "framer-motion": "^2.3.0",
     "helmet": "^3.23.3",
-    "mongoose": "^5.10.0",
+    "mongoose": "^5.10.3",
     "next": "^9.5.0",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
@@ -33,7 +33,7 @@
     "@types/styled-components": "^5.1.2",
     "@types/styled-theming": "^2.2.5",
     "eslint": "^7.7.0",
-    "prettier": "^2.1.1",
-    "typescript": "^3.9.7"
-  }
+    "prettier": "^2.1.1"
+  },
+  "type": "module"
 }

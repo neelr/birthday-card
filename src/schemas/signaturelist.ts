@@ -1,12 +1,12 @@
 import { Schema, Document, model } from 'mongoose'
-import { ISignature, signatureSchema } from './signature';
+import { ISignature, SignatureSchema } from './signature';
 
 export interface ISignatureList extends Document{
     signatures: [ISignature]
 }
 
 export const signatureListSchema: Schema = new Schema({
-    signatures: { type: [signatureSchema] }
+    signatures: { type: [SignatureSchema] }
 })
 
 const SignatureList = model<ISignatureList>('SignatureList', signatureListSchema)

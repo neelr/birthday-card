@@ -6,11 +6,8 @@ export interface ISignature extends Document {
     message: string
 }
 
-export const signatureSchema: Schema = new Schema({
+export const SignatureSchema: Schema = new Schema({
     first_name: {type: String, required: true, maxlength: 20},
     last_name: {type: String, required: true, maxlength: 20},
     message: {type: String, required: true, maxlength: 300}
 })
-
-const Signature = model<ISignature>('Chatroom', signatureSchema)
-export default Signature

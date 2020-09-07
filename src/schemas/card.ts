@@ -1,4 +1,4 @@
-import { Schema, Document, model, Types } from 'mongoose'
+import { Schema, Document, Model, Connection } from 'mongoose'
 
 export interface ICard extends Document {
     name: string
@@ -11,3 +11,6 @@ export const CardSchema: Schema = new Schema({
     date: {type: Date, required: true},
     bgcolors: {type:[String], maxlength: 3}
 })
+
+const Card = (conn: Connection) : Model<ICard> => conn.model('card', CardSchema)
+export default Card
