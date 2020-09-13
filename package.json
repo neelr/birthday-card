@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+
   },
   "keywords": [],
   "author": "",
