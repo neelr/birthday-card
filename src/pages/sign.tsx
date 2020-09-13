@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import config from '../../config'
+import config from './api/config/config'
 import Header from '../components/Header'
 import Timer from '../components/Countdown'
 import Button from '../components/Button'

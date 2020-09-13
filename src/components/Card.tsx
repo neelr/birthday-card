@@ -25,6 +25,13 @@ function Card(props){
   )
 }
 
-const BodyCard = styled.div`
+export const BodyCard = styled.div`
+  width: 70vw;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-color: black;
+  background-color:white;
 `
 export default Card

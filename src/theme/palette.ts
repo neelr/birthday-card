@@ -1,4 +1,4 @@
-import config from '../../config'
+import config from '../pages/api/config/config'
 
 const palette = {
     colors: {

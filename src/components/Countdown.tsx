@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React, { useEffect, useState } from 'react'
-import config from '../../config'
+import config from '../pages/api/config/config'
 
 export const CountWrapper = styled.div`
     padding-top: 1vh;

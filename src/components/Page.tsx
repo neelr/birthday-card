@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 //this is very messy please fix soon
 interface FlipProps {
   flipped:boolean
+  pos: number
 }
 
 const Wrapper = styled.div<FlipProps>`
@@ -14,10 +15,10 @@ const Wrapper = styled.div<FlipProps>`
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: -1rem 4px 8px 0 rgba(0,0,0,0.2);
   transform-origin: 0% 100%;
   transform: rotateY(-${props => props.flipped ? 180 : 0}deg);
-  z-index: initial;
+  z-index: (${props => props.pos});
 `
 export function FlipWrapper(props){
   const [isFlipped, setFlipped] = useState<boolean>(false)
@@ -26,7 +27,7 @@ export function FlipWrapper(props){
     deg = (isFlipped) ? 180:0
   })
   return(
-    <Wrapper onClick={() => {setFlipped(!isFlipped)}} flipped={isFlipped}>
+    <Wrapper onClick={() => {setFlipped(!isFlipped)}} flipped={isFlipped} pos={-1}>
       {props.children}
     </Wrapper>
   )
