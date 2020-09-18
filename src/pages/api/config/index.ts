@@ -1,6 +1,5 @@
 import { getConnection } from '../dbConnnect'
 import { CardConfig } from '../../../schemas/cardconfig'
-import { route } from 'next/dist/next-server/server/router'
 
 getConnection()
 
@@ -15,5 +14,7 @@ export default async (req, res) => {
             } catch (error) {
                 res.status(400).json({success: false})
             }
+        case 'POST':
+
     }
 }

@@ -1,15 +1,29 @@
-import Layout from '../components/Layout'
-import Card from '../components/Card'
-import Header from '../components/Header'
-import Timer from '../components/Countdown'
-import { FlipWrapper, Front, Back } from '../components/Page'
-import config from './api/config/config'
+import Layout from '../../components/Layout'
+import Card from '../../components/Card'
+import Header from '../../components/Header'
+import Timer from '../../components/Countdown'
+import { FlipWrapper, Front, Back } from '../../components/Page'
 import { useState, useEffect } from 'react'
 import ConfettiGenerator from 'confetti-js'
-import Button from '../components/Button'
+import Button from '../../components/Button'
 import Head from 'next/head'
+import { Router, useRouter } from 'next/router'
 
-function Page(){
+Page.getInitialProps = async ({ qeury: { roomcode } }) => {
+    const res = await fetch(`https://kitty.fail/api/${roomcode}`)
+    const { data } =  await res.json()
+
+    if(res.status == 404){
+        
+    }
+
+    return({config: data})
+}
+
+function Page({ config }){
+    const router = useRouter()
+    const { roomcode } = router.query
+
     if(Date.now() < config.activationDate.getTime()){
         return(
             <Layout title={`No peeking!`}>
